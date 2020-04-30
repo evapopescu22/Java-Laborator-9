@@ -14,7 +14,13 @@ public class AlbumManager {
 		AlbumRepository.findById(9);
 		AlbumRepository.findByName("Loaded");
 		AlbumRepository.findByArtist("Bob Dylan");
-
+        
+		ArtistRepository artrep = new ArtistRepository();
+		Artist artist = new Artist();
+		artist.setId(Integer.BYTES);
+		artist.setName("John Lennon");
+		artist.setCountry("England");
+		artrep.create(artist);
 		
 
 		AlbumRepository albrep = new AlbumRepository();
